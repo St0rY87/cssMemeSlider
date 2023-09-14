@@ -4,43 +4,48 @@
     box-sizing: border-box;
 }
 body {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
 }
 
 .container {
     background: grey;
     background: #6eaeec;
-
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-inline: 30px;
 }
 
 
 .mem-slider {
-    background-color: #26272b;
+    gap: 2rem;
+    width: 70rem;
     padding: 2rem;
     display: flex;  
     flex-direction: column;
     align-items: center;
+    background-color: #26272b;
 
 }
 .slider-wrapper{
     margin: 0 auto;
-    width: 30rem;
-    height: 20rem;
+    width: 100%;
+    height: 35rem;
     overflow: hidden;
-    border-radius: 2%;
 }
+.slider-wripper * {
+    height: 100%;
+}
+
+
 .bottom-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 30rem;
-    margin-top: 10px;
+    width: 99%;
 }
 
 .quotes {
@@ -96,9 +101,8 @@ body {
     border: 8px solid white;
     opacity: 1;
  }
-
-.tabs input:nth-child(1) {
-    margin-left: auto;
+.tabs {
+    height: 100%;
 }
 
 .buttons {
@@ -121,18 +125,20 @@ body {
 
 .content {
     width: 400%;
+    height: 100%;
     display: flex;
     transition: 1s;
 }
 
 .content .box {
     width: 100%;
-    height: 20rem;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     user-select: none;
     padding: 40px;
+    border-radius: 15px;
 }
 
 .content .box:nth-child(1) {
@@ -148,6 +154,34 @@ body {
     background-color:rgb(24, 137, 145);
 }
 
+
+
+.mem-slider:has(#slide-1:checked) .content {
+    transform: translateX(0);
+}
+.mem-slider:has(#slide-2:checked) .content {
+    transform: translateX(-25%);
+}
+.mem-slider:has(#slide-3:checked) .content {
+    transform: translateX(-50%);
+}
+.mem-slider:has(#slide-4:checked) .content {
+    transform: translateX(-75%);
+}
+
+
+.mem-slider:has(#slide-1:checked) .quotes-wrapper {
+    transform: translateX(0);
+}
+.mem-slider:has(#slide-2:checked) .quotes-wrapper {
+    transform: translateX(-25%);
+}
+.mem-slider:has(#slide-3:checked) .quotes-wrapper {
+    transform: translateX(-50%);
+}
+.mem-slider:has(#slide-4:checked) .quotes-wrapper {
+    transform: translateX(-75%);
+}
 
 
 
