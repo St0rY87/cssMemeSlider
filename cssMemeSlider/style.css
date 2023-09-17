@@ -33,7 +33,8 @@ body {
     aspect-ratio: 13/10;
     gap: 2rem;
     width: 50rem;
-    padding: 2rem;
+    padding-block: min(5vw, 2rem);
+    padding-inline: min(4vw, 1.5rem);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,6 +68,7 @@ body {
     min-width: 400%;
     display: flex;
     transition: 0.8s;
+    gap: 1px;
 }
 
 .quotes-wrapper p {
@@ -193,13 +195,12 @@ img {
     }
 
     .mem-slider {
-        padding-bottom: 2rem;
         width: 100%;
     }
 
     .bottom-wrapper {
         flex-direction: column-reverse;
-        gap: 1.25rem;
+        gap: 1rem;
     }
 
     .quotes {
