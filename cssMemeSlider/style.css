@@ -1,0 +1,232 @@
+:root {
+    --clr-backg: radial-gradient(circle farthest-corner at 92.3% 71.5%, rgba(83, 138, 214, 1) 0%, rgba(134, 231, 214, 1) 90%);
+    --clr-backg-2: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 94, 247, 1) 17.8%, rgba(2, 245, 255, 1) 100.2%);
+    --clr-backg-slider: #26272b;
+    --clr-ctrl: #6eaeec;
+    --clr-ctrl-active: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    background-image: var(--clr-backg-2);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 1.875rem;
+}
+
+
+.mem-slider {
+    aspect-ratio: 13/10;
+    gap: 2rem;
+    width: 50rem;
+    padding-block: min(5vw, 2rem);
+    padding-inline: min(4vw, 1.5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--clr-backg-slider);
+}
+
+.slider-wrapper {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.bottom-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 99%;
+}
+
+.quotes {
+    font-size: 1.4rem;
+    height: 1.6rem;
+    width: 30rem;
+    display: flex;
+    overflow: hidden;
+    align-items: flex-end;
+}
+
+.quotes-wrapper {
+    min-width: 400%;
+    display: flex;
+    transition: 0.8s;
+    gap: 0.1rem;
+}
+
+.quotes-wrapper p {
+    color: white;
+    width: 30rem;
+}
+
+.controls label {
+    cursor: pointer;
+    padding: 0.3125rem;
+}
+
+.controls input {
+    appearance: none;
+    border-radius: 50%;
+    background-clip: content-box;
+    height: 1rem;
+    width: 1rem;
+    border:  0.5rem solid var(--clr-ctrl);
+    cursor: pointer;
+}
+
+.controls input:hover {
+    border:  0.5rem solid var(--clr-ctrl-active);
+    opacity: 0.8;
+}
+
+.controls input:checked {
+    border: 0.1875rem solid var(--clr-ctrl);
+}
+
+.controls input:checked:hover {
+    border: 0.1875rem solid var(--clr-ctrl-active);
+    opacity: 0.8;
+}
+
+.controls input:checked:active {
+    border: 0.1875rem solid var(--clr-ctrl-active);
+    opacity: 1;
+}
+
+.controls input:active {
+    border: 0.5rem solid var(--clr-ctrl-active);
+    opacity: 1;
+}
+
+.buttons {
+    display: flex;
+    gap: 0.625rem;
+}
+
+.buttons label {
+    width: 1.25rem;
+    height: 1.25rem;
+    opacity: 0.5;
+    border-radius: 1.25rem;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+.buttons label:hover {
+    background-color: var(--clr-ctrl-active);
+}
+
+.content {
+    width: calc(400% + 3rem);
+    height: 100%;
+    display: flex;
+    transition: 1s;
+    gap: 1rem;
+}
+
+.content .box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+
+.mem-slider:has(#slide-1:checked) .content {
+    transform: translateX(0);
+}
+.mem-slider:has(#slide-2:checked) .content {
+    transform: translateX(-25.1336%);
+}
+
+.mem-slider:has(#slide-3:checked) .content {
+    transform: translateX(-50.267%);
+}
+
+.mem-slider:has(#slide-4:checked) .content {
+    transform: translateX(-75.4%);
+}
+
+
+.mem-slider:has(#slide-1:checked) .quotes-wrapper {
+    transform: translateX(0);
+}
+
+.mem-slider:has(#slide-2:checked) .quotes-wrapper {
+    transform: translateX(-25%);
+}
+
+.mem-slider:has(#slide-3:checked) .quotes-wrapper {
+    transform: translateX(-50%);
+}
+
+.mem-slider:has(#slide-4:checked) .quotes-wrapper {
+    transform: translateX(-75%);
+}
+
+
+@media(max-width: 768px) {
+    .container {
+        padding-inline: 1rem;
+    }
+
+    .mem-slider {
+        width: 100%;
+    }
+
+    .bottom-wrapper {
+        flex-direction: column-reverse;
+        gap: 1rem;
+    }
+
+    .quotes {
+        margin-right: auto;
+        width: 99%;
+    }
+
+    .quotes-wrapper p {
+        width: 100%;
+        font-size: 1.125rem;
+    }
+}
+
+@media(max-width: 700px) {
+    .mem-slider:has(#slide-1:checked) .content {
+        transform: translateX(0);
+    }
+    .mem-slider:has(#slide-2:checked) .content {
+        transform: translateX(calc(-25.1336% - 0.7vw));
+    }
+    
+    .mem-slider:has(#slide-3:checked) .content {
+        transform: translateX(calc(-50.267% - 0.7vw));
+    }
+    
+    .mem-slider:has(#slide-4:checked) .content {
+        transform: translateX(calc(-75.4% - 0.7vw));
+    }
+}
