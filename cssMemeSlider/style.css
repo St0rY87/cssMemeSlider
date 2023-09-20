@@ -25,7 +25,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-inline: 30px;
+    padding-inline: 1.875rem;
 }
 
 
@@ -68,7 +68,7 @@ body {
     min-width: 400%;
     display: flex;
     transition: 0.8s;
-    gap: 1px;
+    gap: 0.1rem;
 }
 
 .quotes-wrapper p {
@@ -78,7 +78,7 @@ body {
 
 .controls label {
     cursor: pointer;
-    padding: 5px;
+    padding: 0.3125rem;
 }
 
 .controls input {
@@ -87,37 +87,37 @@ body {
     background-clip: content-box;
     height: 1rem;
     width: 1rem;
-    border: 8px solid var(--clr-ctrl);
+    border:  0.5rem solid var(--clr-ctrl);
     cursor: pointer;
 }
 
 .controls input:hover {
-    border: 8px solid var(--clr-ctrl-active);
+    border:  0.5rem solid var(--clr-ctrl-active);
     opacity: 0.8;
 }
 
 .controls input:checked {
-    border: 3px solid var(--clr-ctrl);
+    border: 0.1875rem solid var(--clr-ctrl);
 }
 
 .controls input:checked:hover {
-    border: 3px solid var(--clr-ctrl-active);
+    border: 0.1875rem solid var(--clr-ctrl-active);
     opacity: 0.8;
 }
 
 .controls input:checked:active {
-    border: 3px solid var(--clr-ctrl-active);
+    border: 0.1875rem solid var(--clr-ctrl-active);
     opacity: 1;
 }
 
 .controls input:active {
-    border: 8px solid var(--clr-ctrl-active);
+    border: 0.5rem solid var(--clr-ctrl-active);
     opacity: 1;
 }
 
 .buttons {
     display: flex;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 .buttons label {
@@ -191,7 +191,7 @@ img {
 
 @media(max-width: 768px) {
     .container {
-        padding-inline: 15px;
+        padding-inline: 1rem;
     }
 
     .mem-slider {
@@ -210,7 +210,7 @@ img {
 
     .quotes-wrapper p {
         width: 100%;
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 }
 
